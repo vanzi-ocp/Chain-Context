@@ -22,6 +22,7 @@
 | [models](models/) | 가치평가·현금흐름·대사 모델 |
 | [sql](sql/) | 온체인 데이터 조회·대사 쿼리 |
 | [scripts](scripts/) | 자료 수집·변환·검증 코드 |
+| [implementation/chain-prism](implementation/chain-prism/) | OCP 판단·증거·검토 기록 시범 구현 v0.2.1 |
 
 ## Chain Prism / OCP
 
@@ -31,7 +32,9 @@
 
 ## Current status
 
-저장소 기본 구조와 작성 안내를 준비한 단계입니다. 실행 가능한 자동화 코드·SQL·모델과 사례 원본은 아직 이 저장소에 수록하지 않았습니다. OCP v1.0 문서와 USDC 부분 적용 사례는 Notion의 프레임워크 PDF에서 확인할 수 있습니다.
+[Chain Prism 시범 구현 v0.2.1](implementation/chain-prism/)을 수록했습니다. 증거·판단·작성자/검토자 분리·차이 기록·결론 스냅샷을 다루는 Python 코어와 API, 데모 및 테스트를 포함합니다. 설치·실행 방법과 구현 범위는 패키지 README를 참고하세요.
+
+2026-11-20 업로드 전 검증에서는 API 테스트를 포함해 63개가 통과했습니다. [검증 기록](implementation/chain-prism/VALIDATION-2026-11-20.md)을 함께 보관합니다. 시범 구현은 자동 회계·조세 판단이나 운영 시스템 연동의 완료를 뜻하지 않습니다. 기존 원고·실증 사례의 수행 범위와 코드의 구현 범위는 별도로 확인합니다.
 
 ## Research principles
 

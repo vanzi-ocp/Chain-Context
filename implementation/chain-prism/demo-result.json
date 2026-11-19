@@ -1,0 +1,106 @@
+{
+  "run_id": "REC-1",
+  "case_id": "DEMO",
+  "scope_id": "SCOPE-1",
+  "unit": "USD",
+  "as_of": "2026-10-31T00:00:00+00:00",
+  "raw_reserve": "1230",
+  "raw_obligation": "1160",
+  "raw_ratio_pct": "106.03",
+  "adjusted_reserve": "1200",
+  "adjusted_obligation": "1200",
+  "adjusted_ratio_pct": "100.00",
+  "difference_amount": "0",
+  "within_tolerance": true,
+  "tolerance": "0.00",
+  "component_breakdown": [
+    {
+      "amount": "1230",
+      "id": "C-1",
+      "assertion_id": "A-1",
+      "label": "준비자산 기초",
+      "side": "reserve",
+      "treatment": "base",
+      "rationale": "설명용 기초 자료",
+      "unit": "USD",
+      "as_of": "2026-10-31T00:00:00Z"
+    },
+    {
+      "amount": "30",
+      "id": "C-2",
+      "assertion_id": "A-2",
+      "label": "운영자금 제외",
+      "side": "reserve",
+      "treatment": "exclude",
+      "rationale": "상환 재원 범위에서 제외한다고 가정",
+      "unit": "USD",
+      "as_of": "2026-10-31T00:00:00Z"
+    },
+    {
+      "amount": "1160",
+      "id": "C-3",
+      "assertion_id": "A-3",
+      "label": "유통 잔액",
+      "side": "obligation",
+      "treatment": "base",
+      "rationale": "설명용 기초 자료",
+      "unit": "USD",
+      "as_of": "2026-10-31T00:00:00Z"
+    },
+    {
+      "amount": "40",
+      "id": "C-4",
+      "assertion_id": "A-4",
+      "label": "미결 상환의무",
+      "side": "obligation",
+      "treatment": "include",
+      "rationale": "상환의무에 포함한다고 가정",
+      "unit": "USD",
+      "as_of": "2026-10-31T00:00:00Z"
+    }
+  ],
+  "auto_approved_conclusion": false,
+  "candidate_state": "needs_review",
+  "ruleset_version": "ocp-reference-guardrail-0.2.1",
+  "note": "산술 재현 결과입니다. 실재성·상환능력·통제 효과성·조정의 적정성을 확정하지 않습니다."
+}
+{
+  "judgment_id": "J-1",
+  "judgment_version": 1,
+  "author": "analyst-1",
+  "proposal": {
+    "grade": "E1",
+    "status": "confirmed_scoped",
+    "rationale": "설명용 범위 안에서 네 구성 항목이 모두 수치 주장에 연결되고 충돌이 없다."
+  },
+  "blocked_statuses": [],
+  "issues": [],
+  "re_review_required": false,
+  "dependency_ids": [
+    "A-1",
+    "A-2",
+    "A-3",
+    "A-4",
+    "IN-1",
+    "IN-2",
+    "IN-3",
+    "IN-4",
+    "S-1",
+    "SCOPE-1",
+    "UNIT-1"
+  ],
+  "dependency_digest": "e0d58216f772e27b262b4aa8360b15fd519d9eab7c031f53052429d85302ea5c",
+  "ready_for_review": true,
+  "ruleset_version": "ocp-reference-guardrail-0.2.1",
+  "independence": {
+    "assertion_ids": [
+      "A-1",
+      "A-2",
+      "A-4",
+      "A-3"
+    ],
+    "overlaps": [],
+    "independent_evidence_count": null,
+    "note": "공유 원천은 독립 증거 수로 합산하지 않습니다. 원천 분리도 독립성을 입증하지 않습니다."
+  }
+}
